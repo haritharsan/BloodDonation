@@ -50,7 +50,7 @@ const RequestBloodDashboard = () => {
       sx={{
         mt: 2,
         display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)', // ← always 3 columns
+        gridTemplateColumns: 'repeat(3, 1fr)',
         gap: 6,
         alignItems: 'stretch',
       }}
@@ -100,6 +100,14 @@ const RequestBloodDashboard = () => {
           fullWidth
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+           InputLabelProps={{ style: { color: 'red' } }}
+           sx={{
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": { borderColor: "red" },
+              "&:hover fieldset": { borderColor: "darkred" },
+              "&.Mui-focused fieldset": { borderColor: "red" }
+            }
+          }}
         />
         <TextField
           label="Blood Group"
@@ -107,6 +115,14 @@ const RequestBloodDashboard = () => {
           fullWidth
           value={bloodGroup}
           onChange={(e) => setBloodGroup(e.target.value)}
+           InputLabelProps={{ style: { color: 'red' } }}
+           sx={{
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": { borderColor: "red" },
+              "&:hover fieldset": { borderColor: "darkred" },
+              "&.Mui-focused fieldset": { borderColor: "red" }
+            }
+          }}
         >
           <MenuItem value="">All</MenuItem>
           {bloodGroups.map((bg) => (
@@ -119,6 +135,14 @@ const RequestBloodDashboard = () => {
           fullWidth
           value={city}
           onChange={(e) => setCity(e.target.value)}
+           InputLabelProps={{ style: { color: 'red' } }}
+           sx={{
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": { borderColor: "red" },
+              "&:hover fieldset": { borderColor: "darkred" },
+              "&.Mui-focused fieldset": { borderColor: "red" }
+            }
+          }}
         />
       </Stack>
 
